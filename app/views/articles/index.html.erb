@@ -1,0 +1,27 @@
+<%= render 'blog_header', title: "Blog Listings", text: "Choose a blog to view below" %>
+
+<table class="table table-responsive">
+  <tr>
+    <th>Title</th>
+    <th colspan="4">Text</th>
+
+
+  </tr>
+
+  <% @articles.each do |article| %>
+
+      <tr>
+        <td><div class="fixedHeight"><%= article.title.truncate(30, separator: /\s/) %></div></td>
+        <td><div class="fixedHeight"><%= article.text.truncate(50, separator: /\s/) %></div></td>
+        <td><%= link_to 'Show', article, class: "btn btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_article_path(article), class: "btn btn-warning" %></td>
+        <td><%= link_to 'Delete', article_path(article),
+                class: "btn btn-danger",
+                method: :delete,
+                data: {confirm: 'Are you sure?' }  %></td>
+      </tr>
+      <% end %>
+
+</table>
+
+<%= link_to 'New Blog', new_article_path, class: "btn btn-success" %>

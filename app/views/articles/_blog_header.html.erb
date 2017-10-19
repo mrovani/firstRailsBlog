@@ -1,0 +1,6 @@
+<%# unless @article.nil? or @article.title.blank?
+  title = @article.title
+  text = @article.text
+end %>
+
+<%= render 'application/blog_header', title: title, text: text, class: "blogHeader" %>

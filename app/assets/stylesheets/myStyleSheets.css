@@ -1,0 +1,29 @@
+.blogHeader {
+  font-family: 'Raleway' sans-serif;
+}
+
+.fixedHeight {
+  height: 50px;
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.blog-title {
+  font-size: 3em;
+  font-family: 'Raleway', sans-serif;
+}
+
+.lead blog-description {
+  font-size: 1.5em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.blog-nav-item {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
+}
