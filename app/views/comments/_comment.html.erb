@@ -1,21 +1,18 @@
+<hr>
+    <h5>
+      <span><%= comment.commenter %> commented <%= comment.created_at.localtime.strftime('on %A %b %d \'%y at %l:%M %p') %></span>
+    </h5>
 
-    <p>
-      <strong>Commenter:</strong>
-      <%= comment.commenter %>
-    </p>
-
-    <p>
-      <strong>Comment:</strong>
+    <p class="commentText">
       <%= comment.body %>
     </p>
 
-    <p>
-      <%= comment.created_at.localtime.strftime('on %A %b %d \'%y at %l:%M %p') %>
-    </p>
+
 
 
     <p>
   <%= link_to 'Delete Comment', [comment.article, comment],
                method: :delete,
-               data: { confirm: 'Are you sure?' } %>
+               data: { confirm: 'Are you sure?' },
+               class: "btn btn-danger commentDelete" %>
     </p>

@@ -1,20 +1,37 @@
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
+<div class="blogBlock">
+  <p>
+  <h3><%= @article.title %></h3>
 </p>
 
 <p>
-  <strong>Text:</strong>
-  <%= @article.text %>
+  <h5><%= @article.text %></h5>
 </p>
+</div>
 
-<h2>Comments</h2>
+
+<div class="comments">
+  <h5 class="comments">
+  <% unless @article.comments.count == 0 %>
+    <%= pluralize(@article.comments.count, "Comment") %>
+  <% else %>
+    No comments
+  <% end %>
+</h5>
+</div>
+
+
+
+<% unless @article.comments.count < 3 %>
+  <%= render 'comments/form' %>
+<% end %>
+
+<!-- Looping through all of the article comments -->
 <%= render @article.comments %>
 
-<h2>Add a comment:</h2>
 <%= render 'comments/form' %>
 
 
-<%= link_to 'Edit', edit_article_path(@article), class: "btn btn-success" %>
 
-<%= link_to 'Back', articles_path, class: "btn btn-success" %>
+<%= link_to 'Edit', edit_article_path(@article), class: "btn btn-primary editButton" %>
+
+<%= link_to 'Back', articles_path, class: "btn btn-primary backButton" %>

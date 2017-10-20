@@ -1,29 +1,85 @@
-.blogHeader {
-  font-family: 'Raleway' sans-serif;
+/*** Navbar Styles ***/
+
+.blog-nav-item {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
 }
 
-.fixedHeight {
-  height: 50px;
-  overflow: hidden;
-  font-family: 'Open Sans', sans-serif;
-}
+
+/*** Header Styles ***/
 
 .blog-title {
-  font-size: 3em;
+  font-size: 2em;
   font-family: 'Raleway', sans-serif;
 }
 
-.lead blog-description {
-  font-size: 1.5em;
-  font-family: 'Open Sans', sans-serif;
+h5 > span {
+  font-weight:100;
+  color: #aaa;
+  font-size: .9em;
+  font-style: oblique;
 }
+
+.commentText {
+  font-weight:100;
+  color: #111;
+  font-size: 1em;
+  font-style: normal;
+}
+
 
 h1 {
   font-size: 1em;
   font-family: 'Open Sans', sans-serif;
 }
 
-.blog-nav-item {
-  font-family: 'Raleway', sans-serif;
-  font-size: 2em;
+.comments {
+  color: red;
+  float: right;
+}
+
+.commentCount {
+  margin-top: 5%;
+}
+
+hr {
+  border: 0;
+ height: 1px;
+ background: #111;
+ background-image: linear-gradient(to right, #eee, #111, #eee);
+}
+
+/*** Blog Table Styling ***/
+.fixedHeight {
+  height: 50px;
+  overflow: hidden;
+  /*font-family: 'Open Sans', sans-serif;
+  font-size: 1em;*/
+}
+
+.blog-description {
+  font-size: 1.5em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.form-control {
+  width: 100%;
+}
+
+.blogBlock > h5 {
+  line-height: 1.35;
+  margin-bottom: 5%;
+}
+
+.mainContent > h5 {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.commentDelete {
+  width: 20%;
+  font-size: 0.75em;
+  padding: 5px;
+  margin-left: 80%;
 }

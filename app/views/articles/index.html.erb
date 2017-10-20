@@ -1,11 +1,9 @@
-<%= render 'blog_header', title: "Blog Listings", text: "Choose a blog to view below" %>
+<%= render 'blog_header', title: "Blog Listings", text: "" %>
 
 <table class="table table-responsive">
   <tr>
     <th>Title</th>
     <th colspan="4">Text</th>
-
-
   </tr>
 
   <% @articles.each do |article| %>
@@ -20,8 +18,6 @@
                 method: :delete,
                 data: {confirm: 'Are you sure?' }  %></td>
       </tr>
-      <% end %>
+  <% end %>
 
 </table>
-
-<%= link_to 'New Blog', new_article_path, class: "btn btn-success" %>
